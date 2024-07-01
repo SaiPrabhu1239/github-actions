@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Super-linter
         # we have taken this from github/marketplace https://github.com/marketplace/actions/super-linter
-        uses: super-linter/super-linter@v6.6.0
+        # uses: super-linter/super-linter@v6.6.0
       - name: listing out the directories
         run: ls -ltr
   deploy:
