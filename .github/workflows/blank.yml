@@ -1,0 +1,8 @@
+name: basic syntax of Github-actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: listing the files
+        run: echo "ls -ltr"
