@@ -24,7 +24,7 @@ jobs:
       - name: listing out the directories
         run: ls -ltr
       - name: skip the test if staisfy the conditions
-        if: "!contains(github.event.message, 'skip ci')"
+        if: "contains(github.event.message, 'skip ci')"
         run: |
           echo "Hello Sai Prabhu"
   deploy:
