@@ -8,4 +8,8 @@ jobs:
     steps:
       - name: Displaying GitHub Context
         run: echo '${{ toJSON(github) }}'
+      - name: Displaying JOB context
+        run: echo '${{ toJSON(job) }}'
+      - name: Displaying STEPS context
+        run: echo '${{ toJSON(steps) }}'
   
