@@ -1,5 +1,5 @@
 name: basic syntax of Github-actions
-
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
