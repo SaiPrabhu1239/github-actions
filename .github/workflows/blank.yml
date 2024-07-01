@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Super-linter
+        # - name: Super-linter
         # we have taken this from github/marketplace https://github.com/marketplace/actions/super-linter
         # uses: super-linter/super-linter@v6.6.0
       - name: listing out the directories
