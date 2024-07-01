@@ -6,8 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-linux
     env:
-      myvar: hello
-      var2: saiprabhu
+      myvar: "hello"
+      var2: "saiprabhu"
     steps:
       - name: accessing the variables
         run: |
