@@ -11,6 +11,7 @@ jobs:
         os: [ubuntu-latest, windows-latest]
     steps:
       - name: check the os version
-        # if: ${{matrix.os == ubuntu}}
+        # if: !${{matrix.os == Ubuntu}}
         run: cat /etc/os-release
+      - run: systeminfo
         
