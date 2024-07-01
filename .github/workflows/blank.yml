@@ -4,10 +4,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout the repo
+        uses: actions/checkout@v2
       - name: listing the files
-        run: echo "ls -ltr"
+        run:  ls -ltr
   test:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Testing the files
+        uses: actions/checkout@v2
+      - name: listing out the directories
         run: ls -ltr
