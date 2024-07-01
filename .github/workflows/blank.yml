@@ -1,9 +1,10 @@
-name: basic syntax of Github-actions
-on: push
+name: basic syntax of Github-action
+on:
+  workflow_dispatch: 
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
+    steps:      
       - name: checkout the repo
         uses: actions/checkout@v2
       - name: listing the files
