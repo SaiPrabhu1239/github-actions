@@ -5,10 +5,15 @@ on:
 jobs:
   contexts:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'Rajitha1239' }}
+    if: ${{ github.actor == 'SaiPrabhu1239' }}
     steps:
       - name: Displaying GitHub Context
         run: echo '${{ toJSON(github) }}'
+  JOB-Context:
+    runs-on: ubuntu-latest
+    if: ${{ job.status == 'failure' }}
+    needs: contexts
+    steps:
       - name: Displaying JOB context
         run: echo '${{ toJSON(job) }}'       
       - name: Displaying STEPS context
