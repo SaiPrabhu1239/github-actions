@@ -1,0 +1,11 @@
+name: Displaying the context info
+on:
+  push:
+    branches: main
+jobs:
+  contexts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Displaying GitHub Context
+        run: echo '${{ toJSON(github) }}'
+  
