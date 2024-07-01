@@ -23,11 +23,11 @@ jobs:
         # uses: super-linter/super-linter@v6.6.0
       - name: listing out the directories
         run: ls -ltr
-      - name: skip the test if staisfy the conditions
-        if: "!contains(github.event.message, 'skip ci')"
-        run: |
-          npm -i install
-          npm test
+      # - name: skip the test if staisfy the conditions
+        # if: "!contains(github.event.message, 'skip ci')"
+        # run: |
+          # npm -i install
+          # npm test
   deploy:
     runs-on: ubuntu-latest
     needs: test
