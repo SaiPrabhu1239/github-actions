@@ -1,0 +1,16 @@
+name: Declaring the variables at Job Level
+on:
+  push:
+    branches: main
+jobs:
+  build:
+    runs-on: ubuntu-linux
+    env:
+      myvar: hello
+      var2: saiprabhu
+    steps:
+      - name: accessing the variables
+        run: |
+          echo "Accessing the declared variables: $myvar $var2"
+      
+
