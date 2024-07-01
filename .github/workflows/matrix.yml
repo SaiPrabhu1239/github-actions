@@ -1,0 +1,16 @@
+name: Implementing strategy matrix and fail fast
+on:
+  push:
+    branches: main
+jobs:
+  matrix-job:
+    runs-on: ${{matrix.os}}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - name: check the os version
+        # if: ${{matrix.os == ubuntu}}
+        run: cat /etc/os-release
+        
