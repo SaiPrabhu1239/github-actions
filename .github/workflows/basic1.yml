@@ -1,0 +1,18 @@
+name: creating the basic syntax file
+on:
+  push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "hello world"
+        run: |
+          echo "Hello World for Build"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Test"
+        run: echo " Hello Test"
+   
+    
+  
