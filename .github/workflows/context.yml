@@ -5,11 +5,12 @@ on:
 jobs:
   contexts:
     runs-on: ubuntu-latest
+    if: ${{ github.actor == 'Rajitha1239' }}
     steps:
       - name: Displaying GitHub Context
         run: echo '${{ toJSON(github) }}'
       - name: Displaying JOB context
-        run: echo '${{ toJSON(job) }}'
+        run: echo '${{ toJSON(job) }}'       
       - name: Displaying STEPS context
         run: echo '${{ toJSON(steps) }}'
   
