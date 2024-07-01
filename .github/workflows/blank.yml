@@ -2,10 +2,6 @@ name: basic syntax of Github-action
 on:
   push:
     branches: main
-  pull_request: 
-    branches: main
-    types: opened
-  workflow_dispatch: 
 jobs:
   build:
     runs-on: ubuntu-latest
